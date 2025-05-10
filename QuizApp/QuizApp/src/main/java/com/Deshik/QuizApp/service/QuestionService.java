@@ -42,7 +42,6 @@ public class QuestionService {
         Optional<Question> existingQuestionOptional = questionDao.findById(id);
         if (existingQuestionOptional.isPresent()) {
             Question existingQuestion = existingQuestionOptional.get();
-            // Update fields (as previously implemented)
             if (updatedQuestion.getQuestionTitle() != null) existingQuestion.setQuestionTitle(updatedQuestion.getQuestionTitle());
             if (updatedQuestion.getOption1() != null) existingQuestion.setOption1(updatedQuestion.getOption1());
             if (updatedQuestion.getOption2() != null) existingQuestion.setOption2(updatedQuestion.getOption2());
